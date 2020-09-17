@@ -1,6 +1,6 @@
 ﻿@page
 @model OdeToFood.Pages.Restaurants.ListModel
-@{    
+@{
 }
 
 <h1>Restaurants</h1>
@@ -8,7 +8,7 @@
 <form method="get">
     <div class="form-group">
         <div class="input-group">
-            <input type="search" class="form-control"  asp-for="SearchTerm"/>
+            <input type="search" class="form-control" asp-for="SearchTerm" />
             <div class="input-group-append">
                 <button class="btn btn-secondary"><i class="fas fa-search"></i></button>
             </div>
@@ -45,10 +45,16 @@
     }
 </table>
 
-<a asp-page="./Edit" class="btn btn-primary">Add New </a>
+@*//This code would render the partial view _Summary just as a React component would*@
+@*@foreach (var restaurant in Model.Restaurants)
+{
+    <partial name="_Summary" model="restaurant" />
+}
+
+<a asp-page="./Edit" class="btn btn-primary">Add New </a>*@
 
 @section footer {
-<span>
-@Model.Message
-</span>
+    <span>
+        @Model.Message
+    </span>
 }
