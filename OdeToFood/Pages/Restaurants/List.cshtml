@@ -1,6 +1,7 @@
 ﻿@page
 @model OdeToFood.Pages.Restaurants.ListModel
 @{
+    ViewData["Title"] = "Restaurants";
 }
 
 <h1>Restaurants</h1>
@@ -47,11 +48,11 @@
 
 @*//This code would render the partial view _Summary just as a React component would*@
 @*@foreach (var restaurant in Model.Restaurants)
-{
-    <partial name="_Summary" model="restaurant" />
-}
+    {
+        <partial name="_Summary" model="restaurant" />
+    }
 
-<a asp-page="./Edit" class="btn btn-primary">Add New </a>*@
+    <a asp-page="./Edit" class="btn btn-primary">Add New </a>*@
 
 @section footer {
     <span>
