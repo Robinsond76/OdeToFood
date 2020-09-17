@@ -35,6 +35,11 @@
                    asp-route-restaurantId="@restaurant.Id">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </a>
+                <a class="btn btn-lg"
+                   asp-page="./Delete"
+                   asp-route-restaurantId="@restaurant.Id">
+                    <i class="fas fa-trash" aria-hidden="true"></i>
+                </a>
             </td>
         </tr>
     }
